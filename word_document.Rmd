@@ -1,47 +1,44 @@
 ---
-title: "Module 3 HTML Document"
+title: "Module 3 Word Document"
 author: "D.PIERROT"
-date: "19/06/2020"
+date: "23/06/2020"
 output: 
-    md_document: 
-          variant:  markdown_github
+  word_document:
+    df_print: kable 
+    reference_docx: word_style_reference.docx
+    fig_height: 5
+    fig_width: 5
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown  {#nextsteps .emphasized}
+
+## Top of the cars dataset
+
+```{r}
+head(cars )
+```
+
+
+
+## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-### Plot of the Cars Dataset
-
 ```{r cars}
-plot(cars)
+summary(cars)
 ```
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-### Plot of the pressure Dataset
-
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
-
-## A short list
-
-* apples
-* bananas
-* oranges
-
-## A simple equation
-
-$$ Y = \beta_0 + \beta_1*X $$
-
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

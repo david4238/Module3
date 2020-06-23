@@ -1,17 +1,5 @@
----
-title: "Module 3 HTML Document"
-author: "D.PIERROT"
-date: "19/06/2020"
-output: 
-    md_document: 
-          variant:  markdown_github
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown  {#nextsteps .emphasized}
+R Markdown
+----------
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -19,29 +7,31 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ### Plot of the Cars Dataset
 
-```{r cars}
+``` r
 plot(cars)
 ```
 
-## Including Plots
+![](githubmd_htmk_document_files/figure-markdown_github/cars-1.png)
+
+Including Plots
+---------------
 
 You can also embed plots, for example:
 
 ### Plot of the pressure Dataset
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+![](githubmd_htmk_document_files/figure-markdown_github/pressure-1.png)
 
-## A short list
+A short list
+------------
 
-* apples
-* bananas
-* oranges
+-   apples
+-   bananas
+-   oranges
 
-## A simple equation
+A simple equation
+-----------------
 
-$$ Y = \beta_0 + \beta_1*X $$
-
+*Y* = *β*<sub>0</sub> + *β*<sub>1</sub> \* *X*
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
