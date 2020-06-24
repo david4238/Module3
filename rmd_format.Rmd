@@ -1,0 +1,59 @@
+---
+title: "Readthedown Template"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+
+```{r setupa, echo=FALSE, cache=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown  {#nextsteps .emphasized}
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+### Plot of the Cars Dataset
+
+```{r cars}
+plot(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+### Plot of the pressure Dataset
+
+```{r toto pressure, echo=FALSE}
+plot(pressure)
+```
+
+## A short list
+
+* apples
+* bananas
+* oranges
+
+## A simple equation
+
+$$ Y = \beta_0 + \beta_1*X $$
