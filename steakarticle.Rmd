@@ -1,27 +1,28 @@
 ---
-title: "Module 3 Word Document"
-author: "D.PIERROT"
-date: "23/06/2020"
-output: 
-  word_document:
-    df_print: kable
-    fig_height: 5
-    fig_width: 5
-    reference_docx: word_style_reference.docx
+title: "Steak preferences in th USA"
+subtitle: "Summary Report for the _**Montaint**_ Region"
+author: "Author : D.PIERROT"
+date: "`r format(Sys.Date(), '%A, %B, %d, %Y')`" 
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+#set any missing Nas int ables to blank
+options(knitr.kable.NA='')
+
+library(fivethirtyeight)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(ggthemes)
+
+data("steak_survey", package="fivethirtyeight")
+ sdat <- na.omit(steak_survey) %>%
+  filter(region=="Mountain")
 ```
-
-
-## Top of the cars dataset
-
-```{r}
-head(cars )
-```
-
-
 
 ## R Markdown
 
